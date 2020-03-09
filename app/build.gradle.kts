@@ -19,7 +19,7 @@ android {
         minSdkVersion(23)
         targetSdkVersion(29)
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.5"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -40,12 +40,12 @@ android {
              *  e.g. "https://maven.pkg.github.com/enefce/AndroidLibrary-GPR-KDSL"
              */
             //url = uri("https://maven.pkg.github.com/UserID/REPOSITORY")
-            url = uri("https://maven.pkg.github.com/enefce/AndroidLibrary-GPR-KDSL")
+            url = uri("https://maven.pkg.github.com/AndroidPharos/Utility-Android")
 
             credentials {
                 /**Create github.properties in root project folder file with gpr.usr=GITHUB_USER_ID  & gpr.key =PERSONAL_ACCESS_TOKEN**/
-                username = githubProperties["gpr.usr"] as String? ?: System.getenv("GPR_USER")
-                password = githubProperties["gpr.key"] as String? ?: System.getenv("GPR_API_KEY")
+                username = "ramyfarah"
+                password = "8dae8439da01333aa092ca222e09eea961aa6daa"
             }
         }
     }
@@ -58,7 +58,6 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
     //Use SampleAndroidLib library
-    implementation("com.enefce.libraries:sampleAndroidLib2:1.0.2")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61")
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("androidx.core:core-ktx:1.1.0")
